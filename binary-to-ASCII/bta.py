@@ -12,5 +12,6 @@ def num_to_ASCII(num):
 	char = chr(num)
 	return char
 
+# students can replace 1000001 to the number of their choice. 
 print(1000001, "is", binary_to_decimal(1000001), "in decimal.")
 print("Binary number", 1000001, "represents", num_to_ASCII(binary_to_decimal(1000001)), "in ASCII.")
