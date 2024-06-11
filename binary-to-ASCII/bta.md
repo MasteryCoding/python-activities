@@ -27,8 +27,16 @@ def binary_to_decimal(num):
     # find the corresponding decimal value of each bit of 'num'
     # sum it up to the result variable 
 	return # the result variable
+
+    # hints: 
+    # The str() method can be used to convert other data types into a string version.
+    # '**' operator can be used for exponentiation 
 ```
 
+If needed, give additional instruction to students about steps to find the decimal value:
+1. Starting from the highest bit, multiply the highest power of 2 IF the bit is holding 1 as its value 
+2. Decrement the power by 1 and move to the second highest bit 
+3. Iterate step 1 and 2 until the lowest bit is reached
 
 #### Solution
 
@@ -69,6 +77,9 @@ Here is the starter code you can begin with:
 def num_to_ASCII(num): 
 	# find num's ASCII character 
 	return # the character 
+
+    # hint: 
+    # methods from Code Along activity can help you with the conversion
 ```
 
 #### Solution
