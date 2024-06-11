@@ -22,8 +22,8 @@ You can start writing codes using this starter code:
 ```py
 def binary_to_decimal(num):
     # convert 'num' to String
-	# create a variable to store the result
-	# find the largest power 'num' holds 
+    # create a variable to store the result
+    # find the largest power 'num' holds 
     # find the corresponding decimal value of each bit of 'num'
     # sum it up to the result variable 
 	return # the result variable
