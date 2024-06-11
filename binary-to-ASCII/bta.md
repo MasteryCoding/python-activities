@@ -34,7 +34,7 @@ def binary_to_decimal(num):
 ```
 
 If needed, give additional instruction to students about steps to find the decimal value:
-1. Starting from the highest bit, multiply the highest power of 2 IF the bit is holding 1 as its value 
+1. Starting from the highest bit, multiply the corresponding power of 2 IF the bit is holding 1 as its binary value 
 2. Decrement the power by 1 and move to the second highest bit 
 3. Iterate step 1 and 2 until the lowest bit is reached
 
