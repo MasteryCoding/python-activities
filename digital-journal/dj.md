@@ -25,64 +25,58 @@ def write_journal():
 	# write the content on the file 
 	# close the file  
 
-    # hints
+    # hints:
+    # with() keyword automatically closes the file after running the code
 ```
-
-If needed, give additional instruction to students about steps to find the decimal value:
-1. Starting from the highest bit, multiply the corresponding power of 2 IF the bit is holding 1 as its binary value 
-2. Decrement the power by 1 and move to the second highest bit 
-3. Iterate step 1 and 2 until the lowest bit is reached
 
 #### Solution
 
 ```py
-def binary_to_decimal(num):
-    binary_str = str(num)
-    decimal_num = 0
-    power = len(binary_str) - 1
-    for bit in binary_str:
-        if bit == '1':
-            decimal_num = decimal_num + (2 ** power)
-        power -= 1
-    return decimal_num
+def write_journal():
+	date = input("Enter the date of the journal: ")
+	open(date,'x')
+	
+	content = input("Enter the content of the journal: ")
+	with open(date,'w') as file:
+		file.write(content) 
 ```
+
 #### Test Code
 
 If it makes sense for the activity to have test code you can provide the code here:
 
 ```py
-print(binary_to_decimal(1100))
-print(binary_to_decimal(1110110))
-print(binary_to_decimal(10))
+write_journal()
 ```
-When you run the code, you should see the following on your screen: 
+When you run the code, you should see the file named as the date you chose and the content you wrote inside the file. 
 
-```py
-12
-118
-2
-```
+Note: Your journal name should not include slash(`/`) since it will cause an FileNotFound error 
 
-### Step 2: Number to ASCII Character 
+### Step 2: Read Journal
 
-Now let's write a function called `num_to_ASCII` which will return the ASCII character that corressponds to the input:
+Now let's write a function called `read_journal` which will show us the content of the journal we chose by doing the following: 
+
+* Take a date as an input
+* Open a journal file that has a name matching the input 
+* Output the content of the journal 
 
 Here is the starter code you can begin with: 
 ```py
-def num_to_ASCII(num): 
-	# find num's ASCII character 
-	return # the character 
-
-    # hint: 
-    # methods from Code Along activity can help you with the conversion
+def read_journal():
+	# assign date as an input
+	# open a file with a name matching the date 
+	# read the content of the file
+	# print the content 
+    # close the file
 ```
 
 #### Solution
 
 ```py
-def num_to_ASCII(num): 
-	char = chr(num)
-	return char
+def read_journal():
+	date = input("Enter the date: ")
+	with open(date,'r') as file:
+	    print(file.read())
 ```
 
 #### Test Code
@@ -90,45 +84,38 @@ def num_to_ASCII(num):
 If it makes sense for the activity to have test code you can provide the code here:
 
 ```py
-print(num_to_ASCII(80))
-print(num_to_ASCII(89))
-print(num_to_ASCII(84))
-print(num_to_ASCII(72))
-print(num_to_ASCII(79))
-print(num_to_ASCII(78))
-print(num_to_ASCII(33))
+read_journal()
 ```
 
-When you run the code, you should see the following on your screen: 
+When you run the code, try running it with the file you created from Step 1. 
+You should see the content of the file as an output. 
 
-```py
-P
-Y
-T
-H
-O
-N
-!
-```
+### Step 3: Finalize the program
 
-### Step 3: Print Statements
+To use two functions in our program, let’s make a feature that will allow us to choose between reading, writing, and closing a journal. We will:
 
-Using functiosn we wrote in Step 1 and 2, let's print the following statements: 
-
-* `(Binary number of your choice) is (the number’s decimal number) in decimal`
-* `Binary number (binary number of your choice) represents (number’s corresponding ASCII character) in ASCII`
-* Note that alphabets corresponds to 65(**1000001** in binary) through 122(**1111010**) in ASCII 
-
-
+* Take a keyword of each function as an input 
+* Run the function that corresponds to the keyword 
+* Output the error message if wrong keyword is taken as an input
+* Ask for a keyword iteratively until we close the journal
 
 #### Solution
 
 ```py
-print([number that student has chosen], "is", binary_to_decimal(num), "in decimal.")
-print("Binary number ", [number that student has chosen], "represents ", num_to_ASCII(binary_to_decimal(num)), "in ASCII.")
+keyword = input("Choose a keyword r(read) / w(write) / c(close): ")
+
+while (keyword != "c"):
+	if (keyword == "r"):
+		read_journal()
+	elif (keyword == "w"):
+		write_journal()
+	else:
+		print("Wrong Keyword")
+	keyword = input("Choose a keyword r(read) / w(write) / c(close): ")
 ```
+(Keywords of students' choice do not have to match with those from the solution.)
 
 ## Conclusion
 
-Now you can convert binary numbers easily with the program we just wrote! 
-You can also try creating a secret message using binary number and ASCII characters. 
+There you have your own digital journal! 
+Try it out by writing journals and reading them. 
