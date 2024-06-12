@@ -26,7 +26,7 @@ def is_palindrome(word):
 	# compare the reversed word and the 'word'
 	return # the result as boolean 
 
-	# hint
+	# hints:
     # list() splits the word into a list of characters 
     # methods from Code Along activity will help you with reversion
 ```
