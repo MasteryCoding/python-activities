@@ -70,7 +70,7 @@ Using the simulated data above, let’s predict the temperature and its potentia
 
 * Take simulated data as an input
 * Calculate the average temperature of the input using `statistics` module
-* Calculate the standard deviation of the input for deviation using `statistics` module
+* Calculate the standard deviation of the input for temperature deviation using `statistics` module
 * Return the rounded number of average temperature and its deviation using `math` module
 
 #### Solution
