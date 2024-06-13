@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this activity, we are going to write a program that forecasts weather using the data collected by importing 3 modules: random, math, and statistics.
+In this activity, we are going to write a program that forecasts weather using the data collected by importing 3 modules: `random`, `math`, and `statistics`.
 
 ## Overview
 
@@ -30,7 +30,7 @@ Now we will create a function called `fluc_simulation`that will simulate changes
 * Use `random` module to generate random fluctuations
 * Take the data as an input
 * Create a new list to store simulated data 
-* Create random fluctuations using function from `random module 
+* Create random fluctuations using function from `random` module 
 * Add fluctuations to each temperature from the data 
 * Store the simulated data into the list 
 
