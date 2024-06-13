@@ -32,9 +32,10 @@ Now we will create a function called `fluc_simulation`that will simulate changes
 * Create a new list to store simulated data 
 * Create random fluctuations using function from `random` module 
 * Add fluctuations to each temperature from the data 
-* Store the simulated data into the list 
+* Store the simulated data into the list and return the list
 
-Then we will return the list. 
+* hint: 
+    * Look for a function in `random` module that generates random floats in a given range  
 
 #### Solution
 
